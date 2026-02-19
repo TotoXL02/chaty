@@ -4,7 +4,7 @@ header("Content-Type: application/json");
 $input = json_decode(file_get_contents("php://input"), true);
 $message = $input["message"] ?? "";
 
-$apiKey = getenv("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");
+$apiKey = getenv("OPENAI_API_KEY");
 
 $data = [
   "model" => "gpt-4o-mini",
